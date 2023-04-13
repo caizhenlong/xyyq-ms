@@ -1,0 +1,51 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: user-center
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/xyyq_ms?serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: 123456
+
+  #session失效时间
+  session:
+    timeout: 86400
+    store-type: redis
+
+  #redis配置
+  redis:
+    host: localhost
+    database: 0
+    port: 6379
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    session:
+      cookie:
+        domain: localhost
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1 #已删除
+      logic-not-delete-value: 0 #未删除
+
+#阿里云 OSS
+#不同的服务器，地址不同
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-hangzhou.aliyuncs.com
+      keyid: LTAI5tNj7MobNz1FGJ359Dow
+      keysecret: Odzt5yHTNHDa5qNiHcHbvv5ixv50ZL
+      #bucket可以在控制台创建，也可以使用java代码创建
+      bucketname: xyyq-system
+

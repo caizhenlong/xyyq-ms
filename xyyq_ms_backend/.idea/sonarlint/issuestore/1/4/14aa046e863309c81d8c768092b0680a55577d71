@@ -1,0 +1,7 @@
+
+^
+java:S5361)"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ù™áÅ
+<
+java:S10753"&Remove this hard-coded path-delimiter.(Šª³Û
+q
+java:S1488A"[Immediately return this expression instead of assigning it to the temporary variable "url".(Á÷Àñ
