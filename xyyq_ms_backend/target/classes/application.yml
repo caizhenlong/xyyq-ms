@@ -21,7 +21,7 @@ spring:
     port: 6379
 
 server:
-  port: 8080
+  port: 7070
   servlet:
     context-path: /api
     session:
@@ -44,8 +44,8 @@ aliyun:
   oss:
     file:
       endpoint: oss-cn-hangzhou.aliyuncs.com
-      keyid: LTAI5tNj7MobNz1FGJ359Dow
-      keysecret: Odzt5yHTNHDa5qNiHcHbvv5ixv50ZL
+      keyid: xxxx-xxx
+      keysecret: xxxx-xxx
       #bucket可以在控制台创建，也可以使用java代码创建
       bucketname: xyyq-system
 
